@@ -8,7 +8,8 @@ Maintainer: Julian Chitiva <julian.chitiva@quantil.com.co>
 Description: The package provides useful tools for manipulating dates and counting days in a financial context.
 Encoding: UTF-8
 LazyData: true
-License: GPL-3
+License: GPL-3 | file LICENSE
+BugReports: https://github.com/quantilma/quantdates/issues
 RoxygenNote: 7.1.0
 Depends: R (>= 2.10)
 Imports:
