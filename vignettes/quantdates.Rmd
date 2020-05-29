@@ -1,0 +1,90 @@
+---
+title: "quantdates"
+author: "Julian Chitiva"
+date: "`r Sys.Date()`"
+output: 
+  knitr:::html_vignette:
+    toc: true
+    fig_caption: yes
+vignette: >
+  %\VignetteIndexEntry{quantdates}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+library(quantdates)
+```
+
+```quantdates``` is a R library that provides the user to work with dates and days count for financial analysis. It works with business days from New York (US), London (UK) and Bogotá (CO). It also implements day counting using common financial conventions such as ACT/360, ACT/365, ACT/ACT and 30/360, among others.
+
+## Dates Manipulation
+
+This part implement functions for dates manipulation such as add days (business days) to a date, transform dates between various formats and obtain business days for a given city calendar. 
+
+### Add Date
+```{r}
+AddDate(date = Sys.Date(),addDays=14,addMonths=2,addYears=3)
+AddDate(date = '2019-10-04',addDays=14,addMonths=2,addYears=3)
+```
+
+### Add Business Days
+```{r}
+AddBusinessDays(date = Sys.Date(),numDate = 15,loc = 'NY')
+AddBusinessDays(date = '2020-10-03',numDate = 15,loc = 'NY')
+AddBusinessDays(date = Sys.Date(),numDate = 15,loc = 'BOG')
+AddBusinessDays(date = Sys.Date(),numDate = 15,loc = 'LDN')
+```
+
+### Last Day of Month
+```{r}
+LastDayOfMonth(year = 2020, month = 2)
+LastDayOfMonth(year = 2024, month = 5)
+LastDayOfMonth(date = '2020-02-03')
+```
+
+### Business Days
+```{r}
+BusinessDays(loc='BOG')[2500:2520]
+BusinessDays(loc='BOG', from='2020-10-10', to='2020-11-10')
+```
+
+### Num to Date
+```{r}
+NumR2DateR(as.numeric(Sys.Date()))
+NumExcel2DateR(as.numeric(Sys.Date()))
+```
+
+## Counting Dates
+
+This section shows the usage of day count functions.
+
+### Difftime
+```{r}
+difftime_leap_year(tfinal='2023-03-05',tinitial='2019-02-28',leapDatesIn=TRUE)
+difftime_leap_year(tfinal=as.Date('2023-03-05'),tinitial=as.Date('2019-02-28'),leapDatesIn=TRUE)
+difftime_leap_year(tfinal='2023-03-05',tinitial='2019-02-28',leapDatesIn=FALSE)
+difftime_leap_year(tfinal='2023-03-05',tinitial=as.Date('2019-02-28'),leapDatesIn=FALSE)
+```
+
+### Difftime in Business Days
+```{r}
+difftime_business(tfinal='2023-03-08',tinitial='2019-02-28',wd=wdBOG)
+difftime_business(tfinal='2023-03-08',tinitial='2019-02-28',wd=wdLDN)
+difftime_business(tfinal='2023-03-08',tinitial='2019-02-28',wd=wdNY)
+```
+
+### Day Count
+```{r}
+day_count(tfinal='2023-03-08',tinitial='2019-02-28',convention='ACT/365')
+day_count(tfinal='2023-03-08',tinitial='2019-02-28',convention='ACT/360')
+day_count(tfinal='2023-03-08',tinitial='2019-02-28',convention='30/360')
+day_count(tfinal='2023-03-08',tinitial='2019-02-28',convention='NL/365')
+day_count(tfinal='2023-03-08',tinitial='2019-02-28',convention='ACT/ACT-ISDA')
+day_count(tfinal='2023-03-08',tinitial='2019-02-28',convention='ACT/ACT-AFB')
+```
+
