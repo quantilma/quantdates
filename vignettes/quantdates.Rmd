@@ -20,7 +20,7 @@ knitr::opts_chunk$set(
 library(quantdates)
 ```
 
-```quantdates``` is a R library that provides the user to work with dates and days count for financial analysis. It works with business days from New York (US), London (UK) and Bogotá (CO). It also implements day counting using common financial conventions such as ACT/360, ACT/365, ACT/ACT and 30/360, among others.
+This package is a R library that provides the user to work with dates and days count for financial analysis. It works with business days from New York (US), London (UK) and Bogota (CO). It also implements day counting using common financial conventions such as ACT/360, ACT/365, ACT/ACT and 30/360, among others.
 
 ## Dates Manipulation
 

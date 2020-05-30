@@ -57,7 +57,7 @@ AddBusinessDays=function(date = Sys.Date(), numDate,
   #' @details
   #'  loc refers to the location for business days:
   #'  \itemize{
-  #'      \item NY for Ney York.
+  #'      \item NY for New York.
   #'      \item LDN for London.
   #'      \item NYLDN for the intersection of business days in New York and London.
   #'      \item BOG for Bogota.
