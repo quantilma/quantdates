@@ -1,11 +1,11 @@
 Package: quantdates
 Type: Package
-Title: Manipule Dates For Finance
+Title: Manipulate Dates for Finance
 Version: 1.0
-Authors@R: c(person("Julian", "Chitiva",email="julian.chitiva@quantil.com.co", role =c("aut","cre")),person("Diego", "Jara", role = "aut"), person("Erick", "Transleteur", role = c("com")),person("Quantil S.A.S", role = c("cph")))
-Author: Julian Chitiva [aut,cre], Diego Jara [aut], Erick Transleteur [com], Quantil S.A.S [cph]
+Authors@R: c(person("Julian", "Chitiva",email="julian.chitiva@quantil.com.co", role =c("aut","cre")),person("Diego", "Jara", role = "aut"), person("Erick", "Translateur", role = c("com")),person("Quantil S.A.S", role = c("cph")))
+Author: Julian Chitiva [aut, cre], Diego Jara [aut], Erick Translateur [com], Quantil S.A.S [cph]
 Maintainer: Julian Chitiva <julian.chitiva@quantil.com.co>
-Description: The package provides useful tools for manipulating dates and counting days in a financial context.
+Description: This package provides useful tools for manipulating dates and counting days in a financial context.
 Encoding: UTF-8
 LazyData: true
 License: GPL-3 | file LICENSE

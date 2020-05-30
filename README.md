@@ -3,10 +3,10 @@ R package that provides useful tools for manipulating dates and counting days in
 
 ## Features
 
-* Get Business Days for London (UK), New York (US) and Bogotá (CO).
-* Get Holidays Days for London (UK), New York (US) and Bogotá (CO).
+* Get Business Days for London (UK), New York (US) and Bogota (CO).
+* Get Holidays Days for London (UK), New York (US) and Bogota (CO).
 * Manipulate dates
-    + Add days considerign business and holidays for the London, New York or Bogotá calendars.
+    + Add days considering business and holidays for the London, New York or Bogota calendars.
     + Number of days  between two dates considering leap years.
     + Get last day of month.
     + Transform numeric dates from R or Excel into dates. 
@@ -65,7 +65,7 @@ day_count(tfinal='2023-03-08',tinitial='2019-02-28',convention='ACT/365')
 
 ## Guidelines for contributing
 
-Currently we are developing the guidelines for contibutions. 
+Currently we are developing the guidelines for contributions. 
 
 ## License
 
