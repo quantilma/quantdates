@@ -1,5 +1,5 @@
 # quantdates
-R package that provides useful tools for manipulating dates and counting days in a financial context.
+Functions to manipulate dates and count days for quantitative finance analysis. The 'quantdates' package considers leap, holidays and business days for relevant calendars in a financial context to simplify quantitative finance calculations, consistent with International Swaps and Derivatives Association (ISDA) regulations.
 
 ## Features
 
