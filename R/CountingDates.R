@@ -148,6 +148,8 @@ day_count = function(tfinal, tinitial, convention='ACT/365'){
   #'
   #' @source
   #' International Swaps and Derivatives Association - ISDA.
+  #' @references
+  #' International Swaps and Derivatives Association. (2006). 2006 ISDA definitions. New York, N.Y: International Swaps and Derivatives Association.
   #'
   #' @export
 

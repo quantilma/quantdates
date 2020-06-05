@@ -87,6 +87,9 @@ day_count(tfinal='2023-03-08',tinitial='2019-02-28',convention='ACT/ACT-ISDA')
 day_count(tfinal='2023-03-08',tinitial='2019-02-28',convention='ACT/ACT-AFB')
 
 }
+\references{
+International Swaps and Derivatives Association. (2006). 2006 ISDA definitions. New York, N.Y: International Swaps and Derivatives Association.
+}
 \author{
 Julian Chitiva
 }

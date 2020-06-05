@@ -73,7 +73,7 @@
       <h1 data-toc-skip>quantdates</h1>
                         <h4 class="author">Julian Chitiva</h4>
             
-            <h4 class="date">2020-05-30</h4>
+            <h4 class="date">2020-06-05</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/quantilma/quantdates/blob/master/vignettes/quantdates.Rmd"><code>vignettes/quantdates.Rmd</code></a></small>
       <div class="hidden name"><code>quantdates.Rmd</code></div>
@@ -91,7 +91,7 @@
 <h3 class="hasAnchor">
 <a href="#add-date" class="anchor"></a>Add Date</h3>
 <div class="sourceCode" id="cb1"><html><body><pre class="r"><span class="fu"><a href="../reference/AddDate.html">AddDate</a></span>(<span class="kw">date</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Sys.time.html">Sys.Date</a></span>(),<span class="kw">addDays</span><span class="kw">=</span><span class="fl">14</span>,<span class="kw">addMonths</span><span class="kw">=</span><span class="fl">2</span>,<span class="kw">addYears</span><span class="kw">=</span><span class="fl">3</span>)
-<span class="co">#&gt; [1] "2023-08-13"</span>
+<span class="co">#&gt; [1] "2023-08-19"</span>
 <span class="fu"><a href="../reference/AddDate.html">AddDate</a></span>(<span class="kw">date</span> <span class="kw">=</span> <span class="st">'2019-10-04'</span>,<span class="kw">addDays</span><span class="kw">=</span><span class="fl">14</span>,<span class="kw">addMonths</span><span class="kw">=</span><span class="fl">2</span>,<span class="kw">addYears</span><span class="kw">=</span><span class="fl">3</span>)
 <span class="co">#&gt; [1] "2022-12-18"</span></pre></body></html></div>
 </div>
@@ -99,13 +99,13 @@
 <h3 class="hasAnchor">
 <a href="#add-business-days" class="anchor"></a>Add Business Days</h3>
 <div class="sourceCode" id="cb2"><html><body><pre class="r"><span class="fu"><a href="../reference/AddBusinessDays.html">AddBusinessDays</a></span>(<span class="kw">date</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Sys.time.html">Sys.Date</a></span>(),<span class="kw">numDate</span> <span class="kw">=</span> <span class="fl">15</span>,<span class="kw">loc</span> <span class="kw">=</span> <span class="st">'NY'</span>)
-<span class="co">#&gt; [1] "2020-06-19"</span>
+<span class="co">#&gt; [1] "2020-06-26"</span>
 <span class="fu"><a href="../reference/AddBusinessDays.html">AddBusinessDays</a></span>(<span class="kw">date</span> <span class="kw">=</span> <span class="st">'2020-10-03'</span>,<span class="kw">numDate</span> <span class="kw">=</span> <span class="fl">15</span>,<span class="kw">loc</span> <span class="kw">=</span> <span class="st">'NY'</span>)
 <span class="co">#&gt; [1] "2020-10-26"</span>
 <span class="fu"><a href="../reference/AddBusinessDays.html">AddBusinessDays</a></span>(<span class="kw">date</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Sys.time.html">Sys.Date</a></span>(),<span class="kw">numDate</span> <span class="kw">=</span> <span class="fl">15</span>,<span class="kw">loc</span> <span class="kw">=</span> <span class="st">'BOG'</span>)
-<span class="co">#&gt; [1] "2020-06-23"</span>
+<span class="co">#&gt; [1] "2020-07-01"</span>
 <span class="fu"><a href="../reference/AddBusinessDays.html">AddBusinessDays</a></span>(<span class="kw">date</span> <span class="kw">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Sys.time.html">Sys.Date</a></span>(),<span class="kw">numDate</span> <span class="kw">=</span> <span class="fl">15</span>,<span class="kw">loc</span> <span class="kw">=</span> <span class="st">'LDN'</span>)
-<span class="co">#&gt; [1] "2020-06-19"</span></pre></body></html></div>
+<span class="co">#&gt; [1] "2020-06-26"</span></pre></body></html></div>
 </div>
 <div id="last-day-of-month" class="section level3">
 <h3 class="hasAnchor">
@@ -136,9 +136,9 @@
 <h3 class="hasAnchor">
 <a href="#num-to-date" class="anchor"></a>Num to Date</h3>
 <div class="sourceCode" id="cb5"><html><body><pre class="r"><span class="fu"><a href="../reference/NumR2DateR.html">NumR2DateR</a></span>(<span class="fu"><a href="https://rdrr.io/r/base/numeric.html">as.numeric</a></span>(<span class="fu"><a href="https://rdrr.io/r/base/Sys.time.html">Sys.Date</a></span>()))
-<span class="co">#&gt; [1] "2020-05-30"</span>
+<span class="co">#&gt; [1] "2020-06-05"</span>
 <span class="fu"><a href="../reference/NumExcel2DateR.html">NumExcel2DateR</a></span>(<span class="fu"><a href="https://rdrr.io/r/base/numeric.html">as.numeric</a></span>(<span class="fu"><a href="https://rdrr.io/r/base/Sys.time.html">Sys.Date</a></span>()))
-<span class="co">#&gt; [1] "1950-05-29"</span></pre></body></html></div>
+<span class="co">#&gt; [1] "1950-06-04"</span></pre></body></html></div>
 </div>
 </div>
 <div id="counting-dates" class="section level2">
@@ -197,7 +197,7 @@
 
 
       <footer><div class="copyright">
-  <p>Developed by Julian Chitiva, Diego Jara.</p>
+  <p>Developed by Julian Chitiva, Diego Jara, Quantil S.A.S.</p>
 </div>
 
 <div class="pkgdown">
