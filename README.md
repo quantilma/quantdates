@@ -69,5 +69,5 @@ Currently we are developing the guidelines for contributions.
 
 ## License
 
-The shiny package as a whole is licensed under the GPLv3. See the [LICENSE](LICENSE) file for more details.
+The quantdates package as a whole is licensed under the GPLv3.
     
