@@ -3,7 +3,7 @@
 #' @author Quantil S.A.S
 #'
 #' @description
-#' Bogota (Colombia) business dates. Dates range between 1998-01-02 and 2030-12-31.
+#' Bogota (Colombia) business dates. Dates range between 1990-01-02 and 2100-12-31.
 #'
 #' \describe{
 #'     \item{wdBOG}{Vector of dates of Bogota business days}
@@ -14,15 +14,15 @@
 #' @source Author Calculations
 "wdBOG"
 
-#' New York business dates.
+#' New York Stock Exchange business dates.
 #'
 #' @author Quantil S.A.S
 #'
 #' @description
-#' New York (United States) business dates. Dates range between 2000-01-03 and 2030-12-31.
+#' New York (United States) Stock Exchange business dates. Dates range between 1990-01-02 and 2100-12-31.
 #'
 #' \describe{
-#'     \item{wdNY}{Vector of dates of New York business days}
+#'     \item{wdNY}{Vector of dates of New York Stock Exchange (NYSE) business days}
 #' }
 #'
 #' @format Vector of dates.
@@ -30,12 +30,28 @@
 #' @source Author Calculations
 "wdNY"
 
+#' New York Government Bonds business dates.
+#'
+#' @author Quantil S.A.S
+#'
+#' @description
+#' New York (United States) Government Bonds business dates. Dates range between 1990-01-02 and 2100-12-31.
+#'
+#' \describe{
+#'     \item{wdNY}{Vector of dates of New York Government Bonds (NYGB) business days}
+#' }
+#'
+#' @format Vector of dates.
+#'
+#' @source Author Calculations
+"wdNYGB"
+
 #' London business dates.
 #'
 #' @author Quantil S.A.S
 #'
 #' @description
-#' London (England) business dates. Dates range between 2000-01-03 and 2030-12-31.
+#' London (England) business dates. Dates range between 1990-01-02 and 2100-12-31.
 #'
 #' \describe{
 #'     \item{wdLDN}{Vector of dates of London business days}
@@ -52,8 +68,8 @@
 #' @author Quantil S.A.S
 #'
 #' @description
-#' Bogota (Colombia) holidays dates. The holidays were created using the package timeDate.
-#' Dates range between 2011-01-10 and 2050-12-08.
+#' Bogota (Colombia) holidays dates. The holidays were created using the package bizdays.
+#' Dates range between 1990-01-01 and 2100-12-08.
 #'
 #' \describe{
 #'     \item{holiDaysBOG}{Vector of dates of Bogota holidays}
@@ -64,16 +80,33 @@
 #' @source Author Calculations
 "holiDaysBOG"
 
-#' New York holidays dates.
+#' New York Stock Exchange holidays dates.
 #'
 #' @author Quantil S.A.S
 #'
 #' @description
-#' New York-United States holidays dates. The holidays were created using the package timeDate.
-#' Dates range between 1900-01-01 and 2100-12-24.
+#' New York Stock Exchange -United States holidays dates. The holidays were created using the package bizdays.
+#' Dates range between 1990-01-01 and 2100-12-24.
 #'
 #' \describe{
-#'     \item{holiDaysNY}{Vector of dates of New York holidays}
+#'     \item{holiDaysNY}{Vector of dates of New York Stock Exchange holidays}
+#' }
+#'
+#' @format Vector of dates.
+#'
+#' @source Author Calculations
+"holiDaysNY"
+
+#' New York Government Bonds holidays dates.
+#'
+#' @author Quantil S.A.S
+#'
+#' @description
+#' New York Government Bonds -United States holidays dates. The holidays were created using the package bizdays.
+#' Dates range between 1990-01-01 and 2100-12-24.
+#'
+#' \describe{
+#'     \item{holiDaysNY}{Vector of dates of New York Government Bonds holidays}
 #' }
 #'
 #' @format Vector of dates.
@@ -86,8 +119,8 @@
 #' @author Quantil S.A.S
 #'
 #' @description
-#' London(England) holidays dates. The holidays were created using the package timeDate.
-#' Dates range between 1900-04-13 and 2100-12-28.
+#' London (England) holidays dates. The holidays were created using the package bizdays.
+#' Dates range between 1990-01-01  and 2100-12-28.
 #'
 #' \describe{
 #'     \item{holiDaysLDN}{Vector of dates of London holidays}
