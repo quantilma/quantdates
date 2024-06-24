@@ -1,15 +1,14 @@
 AddDate=function(date = Sys.Date(),addDays=0,addMonths=0,addYears=0)  {
   #' AddDate
-  #' @author Julian Chitiva and Diego Jara
+  #' @author Julian Chitiva, Diego Jara and Juan Pablo Bermudez
   #' @description
   #' Function to add a number of days, months and years to a specific date.
-  #' The length of addDays, addMonths and addYears must be the same.
-  #'
+  #' 
   #' @param date  Initial date.
   #' @param addDays  If specified, vector number of days to add to the initial date.
   #' @param addMonths  If specified, vector number of months to add to the initial date.
   #' @param addYears  If specified, vector number of years to add to the initial date.
-  #' @return The output is the final date after adding the number of days, months and years to the initial date.
+  #' @return The output is a vector of final dates after adding the number of days, months and years to the initial date.
   #'
   #' @examples
   #' # Date input as Date object
@@ -17,24 +16,27 @@ AddDate=function(date = Sys.Date(),addDays=0,addMonths=0,addYears=0)  {
   #'
   #' # Date input as character object
   #' AddDate(date = '2019-10-04',addDays=14,addMonths=2,addYears=3)
+  #' 
+  #' # Date vectors to add to initial date
+  #' AddDate(Sys.Date(), addDays = c(1,2), addMonths = c(4,5),addYears = c(5,6))
   #'
   #' @export
-
+  
   ## Param validation
   if(!lubridate::is.Date(date)){
     try(date <- as.Date(date),
         stop(paste0(deparse(sys.call()),':',date,' is not valid as Date.'),call. = FALSE))
   }
-  if(suppressWarnings(is.na(as.numeric(addDays)))){
+  if(suppressWarnings(any(is.na(as.numeric(addDays))))){
     stop(paste0(deparse(sys.call()),':',addDays,' is not valid amount to add.'),call. = FALSE)
   }
-  if(suppressWarnings(is.na(as.numeric(addMonths)))){
+  if(suppressWarnings(any(is.na(as.numeric(addMonths))))){
     stop(paste0(deparse(sys.call()),':',addMonths,' is not valid amount to add.'),call. = FALSE)
   }
-  if(suppressWarnings(is.na(as.numeric(addYears)))){
-    stop(paste0(deparse(sys.call()),':',addMonths,' is not valid amount to add.'),call. = FALSE)
+  if(suppressWarnings(any(is.na(as.numeric(addYears))))){
+    stop(paste0(deparse(sys.call()),':',addYears,' is not valid amount to add.'),call. = FALSE)
   }
-
+  
   ## Function
   date=lubridate::add_with_rollback(date, lubridate::days(addDays), roll_to_first = FALSE, preserve_hms = TRUE)
   date=lubridate::add_with_rollback(date, months(addMonths), roll_to_first = FALSE, preserve_hms = TRUE)
