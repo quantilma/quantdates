@@ -40,14 +40,24 @@ difftime_leap_year=function(tfinal,tinitial,leapDatesIn=TRUE)  {
 difftime_business = function(tfinal,tinitial,wd=wdBOG){
   #' difftime_business
   #'
-  #' @author Diego Jara
+  #' @author Diego Jara and Juan Pablo Bermudez
   #'
   #' Function to count the number of business days between two dates.
   #'
   #' @param tinitial  Initial date, it must be a business day.
   #' @param tfinal  Final date, it must be a business day.
   #' @param wd  Vector of dates with business days. The default are the business
-  #' days of Bogota.
+  #' days of Bogota. See details
+  #' 
+  #' @details
+  #'  wd refers to the business days of a specific location:
+  #'  \itemize{
+  #'      \item wdNYGB for New York Government Bonds Market.
+  #'      \item wdNY for New York Stock Exchange Market.
+  #'      \item wdLDN for London.
+  #'      \item wdBOG for Bogota.
+  #' }
+  #' 
   #' @return Number of days between the specified dates.
   #'
   #' @examples
@@ -56,17 +66,22 @@ difftime_business = function(tfinal,tinitial,wd=wdBOG){
   #' difftime_business(tfinal=as.Date('2023-03-08'),tinitial=as.Date('2019-02-28'),wd=wdBOG)
   #' difftime_business(tfinal='2023-03-08',tinitial=as.Date('2019-02-28'),wd=wdLDN)
   #' difftime_business(tfinal='2023-03-08',tinitial='2019-02-28',wd=wdNY)
+  #' difftime_business(tfinal='2023-03-08',tinitial='2019-02-28',wd=wdNYGB)
   #'
   #' @export
-
+  
+  # Param validation
   if(!lubridate::is.Date(tfinal)) try(tfinal <- as.Date(tfinal),
-                           stop(paste0(deparse(sys.call()),': ',tfinal,' is not valid as Date.'),call. = FALSE))
+                                      stop(paste0(deparse(sys.call()),': ',tfinal,' is not valid as Date.'),call. = FALSE))
   if(!lubridate::is.Date(tinitial)) try(tinitial <- as.Date(tinitial),
-                             stop(paste0(deparse(sys.call()),': ',tinitial,' is not valid as Date.'),call. = FALSE))
+                                        stop(paste0(deparse(sys.call()),': ',tinitial,' is not valid as Date.'),call. = FALSE))
   if(is.null(wd)) stop(paste0(deparse(sys.call()),':',' wd is not provided'),call. = FALSE)
-
-
-  return( which(wd==tfinal)-which(wd==tinitial) )
+  if(!inherits(wd,'Date')) stop(paste0(deparse(sys.call()),':',' wd is not a date class vector'),call. = FALSE)
+  
+  if(!tfinal %in% wd) stop(paste0(deparse(sys.call()),':',' tfinal is not a business day in the provided vector.'),call. = FALSE)
+  if(!tinitial %in% wd) stop(paste0(deparse(sys.call()),':',' tinitial is not a business day in the provided vector.'),call. = FALSE)
+  
+  return(which(wd==tfinal)-which(wd==tinitial))
 }
 
 day_count = function(tfinal, tinitial, convention='ACT/365'){
