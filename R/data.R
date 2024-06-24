@@ -112,7 +112,7 @@
 #' @format Vector of dates.
 #'
 #' @source Author Calculations
-"holiDaysNY"
+"holiDaysNYGB"
 
 #' London holidays dates.
 #'
