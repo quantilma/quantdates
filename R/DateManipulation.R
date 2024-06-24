@@ -151,7 +151,7 @@ LastDayOfMonth=function (year, month, date=NULL) {
 BusinessDays = function(loc='BOG', from=NULL, to=NULL){
   #' BusinessDays
   #'
-  #' @author Diego Jara and Julian Chitiva
+  #' @author Diego Jara, Julian Chitiva and Juan Pablo Bermudez
   #'
   #' @description
   #' Calculate business days for a given location. Currently, data availability
