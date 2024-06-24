@@ -154,23 +154,26 @@ BusinessDays = function(loc='BOG', from=NULL, to=NULL){
   #' @author Diego Jara and Julian Chitiva
   #'
   #' @description
-  #' Calculate business days for a given location. Data availability
-  #' depends on the location.
+  #' Calculate business days for a given location. Currently, data availability
+  #' goes from 1990 to 2100.
   #'
   #' @param loc  String that determines the location for business days. See details.
   #' @param from  If provided returns available business dates after this date (inclusive).
   #' @param to  If provided returns available business dates until this date (inclusive).
   #'
-  #' @return Vector of business days. Data availability depends on the location.
+  #' @return Vector of business days. Data availability from 1990 up to 2100.
   #'
   #' @details
   #'  loc refers to the location for business days:
   #'  \itemize{
-  #'      \item NY for New York.
+  #'      \item NYGB for New York Government Bonds Market.
+  #'      \item NY for New York Stock Exchange Market.
   #'      \item LDN for London.
-  #'      \item NYLDN for the intersection of business days in New York and London.
+  #'      \item NYLDN for the intersection of business days in New York Stock Exchange and London.
+  #'      \item NYGBLDN for the intersection of business days in New York Government Bond and London.
   #'      \item BOG for Bogota.
-  #'      \item BOGNY for the intersection of business days in Bogota and New York.
+  #'      \item BOGNY for the intersection of business days in Bogota and New York Government Bond.
+  #'      \item BOGNYGB for the intersection of business days in Bogota and New York Stock Exchange.
   #' }
   #'
   #'
@@ -186,44 +189,47 @@ BusinessDays = function(loc='BOG', from=NULL, to=NULL){
   #' # Dates
   #' BusinessDays(loc='BOG', from=as.Date('2020-10-10'), to='2020-11-10')
   #'
-  #' # Returns all available business days for the locatio after given
+  #' # Returns all available business days for the location after given
   #' # 'from' date as character
   #' BusinessDays(loc='BOG', from='2020-10-10')
   #'
   #' @export
-
+  
   ## Param validation
   if(!is.null(from)){
     if(!lubridate::is.Date(from)){
       try(date <- as.Date(from),
-          stop(paste0(deparse(sys.call()),':',from,' is not valid as Date.'),call. = FALSE))
+          stop(paste0(deparse(sys.call()),': ',from,' is not valid as Date.'),call. = FALSE))
     }
   }
   if(!is.null(to)){
     if(!lubridate::is.Date(to)){
       try(date <- as.Date(to),
-          stop(paste0(deparse(sys.call()),':',to,' is not valid as Date.'),call. = FALSE))
+          stop(paste0(deparse(sys.call()),': ',to,' is not valid as Date.'),call. = FALSE))
     }
   }
-
-
-  if(!loc %in% c('NY','BOG','LDN','NYLDN','BOGNY')) stop('Invalid loc parameter.')
-
-
+  
+  
+  if(!loc %in% c('NY','NYGB','BOG','LDN','NYLDN','NYGBLDN','BOGNY','BOGNYGB')) stop('Invalid loc parameter.')
+  
+  
   ## Function
   if(loc=='BOG'){holiDays=holiDaysBOG}
   else if(loc=='NY'){holiDays=holiDaysNY}
+  else if(loc=='NYGB'){holiDays=holiDaysNYGB}
   else if(loc=='LDN'){holiDays=holiDaysLDN}
   else if(loc=='NYLDN'){holiDays=c(holiDaysLDN,holiDaysNY);holiDays=holiDays[order(holiDays)]}
+  else if(loc=='NYGBLDN'){holiDays=c(holiDaysLDN,holiDaysNYGB);holiDays=holiDays[order(holiDays)]}
   else if(loc=='BOGNY'){holiDays=c(holiDaysBOG,holiDaysNY);holiDays=holiDays[order(holiDays)]}
-
+  else if(loc=='BOGNYGB'){holiDays=c(holiDaysBOG,holiDaysNYGB);holiDays=holiDays[order(holiDays)]}
+  
   dates = seq(holiDays[1],max(holiDays),by = "day")
   dates = setdiff(dates,holiDays)
-  dates  = as.Date(dates,origin="1970-01-01")
+  dates = as.Date(dates,origin="1970-01-01")
   dates = dates[!weekdays(dates) %in% c('Saturday','Sunday')]
   if(!is.null(from)) dates <- dates[dates>=from]
   if(!is.null(to)) dates <- dates[dates<=to]
-
+  
   return(dates)
 }
 
