@@ -45,7 +45,7 @@ The convention accepts the following values:
     Also known as ACT/365 Fixed.
 
     \item ACT/360.
-    \deqn{DayCount = \frac{Days(tintial, tfinal)}{365}}
+    \deqn{DayCount = \frac{Days(tintial, tfinal)}{360}}
 
     \item ACT/365L.
     \deqn{DayCount = \frac{Days(tintial, tfinal)}{DiY}}

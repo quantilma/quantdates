@@ -1,15 +1,15 @@
 Package: quantdates
 Type: Package
 Title: Manipulate Dates for Finance
-Version: 1.0
-Authors@R: c(person("Julian", "Chitiva",email="julian.chitiva@quantil.com.co", role =c("aut","cre")),person("Diego", "Jara", role = "aut"), person("Erick", "Translateur", role = c("com")),person("Quantil S.A.S", role = c("aut","cph")))
+Version: 2.0
+Authors@R: c(person("Julian", "Chitiva",email="julian.chitiva@quantil.com.co", role =c("aut","cre")),person("Diego", "Jara", role = "aut"), person("Erick", "Translateur", role = c("com")),person("Juan Pablo", "Bermudez", role ="aut"),person("Quantil S.A.S", role = c("aut","cph")))
 Maintainer: Julian Chitiva <julian.chitiva@quantil.com.co>
 Description: Functions to manipulate dates and count days for quantitative finance analysis. The 'quantdates' package considers leap, holidays and business days for relevant calendars in a financial context to simplify quantitative finance calculations, consistent with International Swaps and Derivatives Association (ISDA) (2006) <https://www.isda.org/book/2006-isda-definitions/> regulations.
 Encoding: UTF-8
 LazyData: true
 License: GPL-3
 BugReports: https://github.com/quantilma/quantdates/issues
-RoxygenNote: 7.1.0
+RoxygenNote: 7.3.1
 Depends: R (>= 2.10)
 Imports:
     lubridate (>= 1.7.4)

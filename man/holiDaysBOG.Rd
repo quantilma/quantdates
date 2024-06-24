@@ -14,8 +14,8 @@ Author Calculations
 holiDaysBOG
 }
 \description{
-Bogota (Colombia) holidays dates. The holidays were created using the package timeDate.
-Dates range between 2011-01-10 and 2050-12-08.
+Bogota (Colombia) holidays dates. The holidays were created using the package bizdays.
+Dates range between 1990-01-01 and 2100-12-08.
 
 \describe{
     \item{holiDaysBOG}{Vector of dates of Bogota holidays}

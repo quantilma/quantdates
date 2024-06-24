@@ -14,8 +14,8 @@ Author Calculations
 holiDaysLDN
 }
 \description{
-London(England) holidays dates. The holidays were created using the package timeDate.
-Dates range between 1900-04-13 and 2100-12-28.
+London (England) holidays dates. The holidays were created using the package bizdays.
+Dates range between 1990-01-01  and 2100-12-28.
 
 \describe{
     \item{holiDaysLDN}{Vector of dates of London holidays}

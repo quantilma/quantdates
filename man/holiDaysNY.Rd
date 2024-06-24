@@ -3,22 +3,35 @@
 \docType{data}
 \name{holiDaysNY}
 \alias{holiDaysNY}
-\title{New York holidays dates.}
+\title{New York Stock Exchange holidays dates.}
 \format{
+Vector of dates.
+
 Vector of dates.
 }
 \source{
 Author Calculations
+
+Author Calculations
 }
 \usage{
 holiDaysNY
+
+holiDaysNY
 }
 \description{
-New York-United States holidays dates. The holidays were created using the package timeDate.
-Dates range between 1900-01-01 and 2100-12-24.
+New York Stock Exchange -United States holidays dates. The holidays were created using the package bizdays.
+Dates range between 1990-01-01 and 2100-12-24.
 
 \describe{
-    \item{holiDaysNY}{Vector of dates of New York holidays}
+    \item{holiDaysNY}{Vector of dates of New York Stock Exchange holidays}
+}
+
+New York Government Bonds -United States holidays dates. The holidays were created using the package bizdays.
+Dates range between 1990-01-01 and 2100-12-24.
+
+\describe{
+    \item{holiDaysNY}{Vector of dates of New York Government Bonds holidays}
 }
 }
 \author{

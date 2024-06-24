@@ -3,7 +3,7 @@
 \docType{data}
 \name{wdNY}
 \alias{wdNY}
-\title{New York business dates.}
+\title{New York Stock Exchange business dates.}
 \format{
 Vector of dates.
 }
@@ -14,10 +14,10 @@ Author Calculations
 wdNY
 }
 \description{
-New York (United States) business dates. Dates range between 2000-01-03 and 2030-12-31.
+New York (United States) Stock Exchange business dates. Dates range between 1990-01-02 and 2100-12-31.
 
 \describe{
-    \item{wdNY}{Vector of dates of New York business days}
+    \item{wdNY}{Vector of dates of New York Stock Exchange (NYSE) business days}
 }
 }
 \author{

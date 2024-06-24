@@ -14,7 +14,7 @@ Author Calculations
 wdLDN
 }
 \description{
-London (England) business dates. Dates range between 2000-01-03 and 2030-12-31.
+London (England) business dates. Dates range between 1990-01-02 and 2100-12-31.
 
 \describe{
     \item{wdLDN}{Vector of dates of London business days}

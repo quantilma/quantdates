@@ -14,7 +14,7 @@ Author Calculations
 wdBOG
 }
 \description{
-Bogota (Colombia) business dates. Dates range between 1998-01-02 and 2030-12-31.
+Bogota (Colombia) business dates. Dates range between 1990-01-02 and 2100-12-31.
 
 \describe{
     \item{wdBOG}{Vector of dates of Bogota business days}

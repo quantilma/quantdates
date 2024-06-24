@@ -20,16 +20,19 @@ is the same.
 }
 \description{
 Function to add a number of business days to a specific date. Currently the function work for
-returning values between 2000 and 2030.
+returning values between 1990 and 2100.
 }
 \details{
 loc refers to the location for business days:
  \itemize{
-     \item NY for New York.
+     \item NY for New York Stock Exchange Market.
+     \item NYGB for New York Government Bonds Market.
      \item LDN for London.
-     \item NYLDN for the intersection of business days in New York and London.
+     \item NYLDN for the intersection of business days in New York Stock Exchange and London.
+     \item NYGBLDN for the intersection of business days in New York Government Bond and London.
      \item BOG for Bogota.
-     \item BOGNY for the intersection of business days in Bogota and New York.
+     \item BOGNY for the intersection of business days in Bogota and New York Government Bond.
+     \item BOGNYGB for the intersection of business days in Bogota and New York Stock Exchange.
 }
 }
 \examples{
@@ -41,5 +44,5 @@ AddBusinessDays(date = as.character(Sys.Date()),numDate = 15,loc = 'BOG')
 
 }
 \author{
-Diego Jara
+Diego Jara and Juan Pablo Bermudez
 }

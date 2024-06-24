@@ -14,20 +14,23 @@ BusinessDays(loc = "BOG", from = NULL, to = NULL)
 \item{to}{If provided returns available business dates until this date (inclusive).}
 }
 \value{
-Vector of business days. Data availability depends on the location.
+Vector of business days. Data availability from 1990 up to 2100.
 }
 \description{
-Calculate business days for a given location. Data availability
-depends on the location.
+Calculate business days for a given location. Currently, data availability
+goes from 1990 to 2100.
 }
 \details{
 loc refers to the location for business days:
  \itemize{
-     \item NY for New York.
+     \item NYGB for New York Government Bonds Market.
+     \item NY for New York Stock Exchange Market.
      \item LDN for London.
-     \item NYLDN for the intersection of business days in New York and London.
+     \item NYLDN for the intersection of business days in New York Stock Exchange and London.
+     \item NYGBLDN for the intersection of business days in New York Government Bond and London.
      \item BOG for Bogota.
-     \item BOGNY for the intersection of business days in Bogota and New York.
+     \item BOGNY for the intersection of business days in Bogota and New York Government Bond.
+     \item BOGNYGB for the intersection of business days in Bogota and New York Stock Exchange.
 }
 }
 \examples{
@@ -42,11 +45,11 @@ BusinessDays(loc='BOG', from='2020-10-10', to='2020-11-10')
 # Dates
 BusinessDays(loc='BOG', from=as.Date('2020-10-10'), to='2020-11-10')
 
-# Returns all available business days for the locatio after given
+# Returns all available business days for the location after given
 # 'from' date as character
 BusinessDays(loc='BOG', from='2020-10-10')
 
 }
 \author{
-Diego Jara and Julian Chitiva
+Diego Jara, Julian Chitiva and Juan Pablo Bermudez
 }

@@ -16,11 +16,10 @@ AddDate(date = Sys.Date(), addDays = 0, addMonths = 0, addYears = 0)
 \item{addYears}{If specified, vector number of years to add to the initial date.}
 }
 \value{
-The output is the final date after adding the number of days, months and years to the initial date.
+The output is a vector of final dates after adding the number of days, months and years to the initial date.
 }
 \description{
 Function to add a number of days, months and years to a specific date.
-The length of addDays, addMonths and addYears must be the same.
 }
 \examples{
 # Date input as Date object
@@ -29,7 +28,10 @@ AddDate(date = Sys.Date(),addDays=14,addMonths=2,addYears=3)
 # Date input as character object
 AddDate(date = '2019-10-04',addDays=14,addMonths=2,addYears=3)
 
+# Date vectors to add to initial date
+AddDate(Sys.Date(), addDays = c(1,2), addMonths = c(4,5),addYears = c(5,6))
+
 }
 \author{
-Julian Chitiva and Diego Jara
+Julian Chitiva, Diego Jara and Juan Pablo Bermudez
 }
