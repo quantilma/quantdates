@@ -3,8 +3,8 @@ Functions to manipulate dates and count days for quantitative finance analysis. 
 
 ## Features
 
-* Get Business Days for London (UK), New York (US) and Bogota (CO).
-* Get Holidays Days for London (UK), New York (US) and Bogota (CO).
+* Get Business Days for London (UK), New York (US) (Stock Exchange and Government Bonds) and Bogota (CO).
+* Get Holidays Days for London (UK), New York (US) (Stock Exchange and Government Bonds) and Bogota (CO).
 * Manipulate dates
     + Add days considering business and holidays for the London, New York or Bogota calendars.
     + Number of days  between two dates considering leap years.
