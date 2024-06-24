@@ -118,7 +118,7 @@ day_count = function(tfinal, tinitial, convention='ACT/365'){
   #'     Also known as ACT/365 Fixed.
   #'
   #'     \item ACT/360.
-  #'     \deqn{DayCount = \frac{Days(tintial, tfinal)}{365}}
+  #'     \deqn{DayCount = \frac{Days(tintial, tfinal)}{360}}
   #'
   #'     \item ACT/365L.
   #'     \deqn{DayCount = \frac{Days(tintial, tfinal)}{DiY}}
@@ -167,19 +167,19 @@ day_count = function(tfinal, tinitial, convention='ACT/365'){
   #' International Swaps and Derivatives Association. (2006). 2006 ISDA definitions. New York, N.Y: International Swaps and Derivatives Association.
   #'
   #' @export
-
-
+  
+  ## Param validation
   if(!convention %in% c('ACT/365','ACT/360','ACT/365L','NL/365'
-                       ,'ACT/ACT-ISDA','ACT/ACT-AFB',
-                       '30/360')) stop('Invalid day count convention.')
-
+                        ,'ACT/ACT-ISDA','ACT/ACT-AFB',
+                        '30/360')) stop('Invalid day count convention.')
+  
   if(!lubridate::is.Date(tfinal)) try(tfinal <- as.Date(tfinal),
-                           stop(paste0(deparse(sys.call()),':',tfinal,' is not valid as Date.'),call. = FALSE))
+                                      stop(paste0(deparse(sys.call()),':',tfinal,' is not valid as Date.'),call. = FALSE))
   if(!lubridate::is.Date(tinitial)) try(tinitial <- as.Date(tinitial),
-                             stop(paste0(deparse(sys.call()),':',tinitial,' is not valid as Date.'),call. = FALSE))
-
-
-
+                                        stop(paste0(deparse(sys.call()),':',tinitial,' is not valid as Date.'),call. = FALSE))
+  
+  
+  
   if(convention %in% c('ACT/365','ACT/360','NL/365')){
     leapDatesIn <- convention!='NL/365'
     return(.day_count_ACT_FIX(tfinal, tinitial, convention, leapDatesIn))
@@ -194,8 +194,6 @@ day_count = function(tfinal, tinitial, convention='ACT/365'){
   }else{
     # Never
   }
-
-
 }
 
 .day_count_ACT_FIX <- function(tfinal, tinitial, convention,...){
