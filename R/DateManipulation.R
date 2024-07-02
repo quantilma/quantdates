@@ -64,8 +64,8 @@ AddBusinessDays=function(date = Sys.Date(), numDate, loc="BOG")  {
   #'      \item NYLDN for the intersection of business days in New York Stock Exchange and London.
   #'      \item NYGBLDN for the intersection of business days in New York Government Bond and London.
   #'      \item BOG for Bogota.
-  #'      \item BOGNY for the intersection of business days in Bogota and New York Government Bond.
-  #'      \item BOGNYGB for the intersection of business days in Bogota and New York Stock Exchange.
+  #'      \item BOGNY for the intersection of business days in Bogota and New York Stock Exchange.
+  #'      \item BOGNYGB for the intersection of business days in Bogota and New York Government Bond.
   #' }
   #'
   #' @return The output is the final date after adding the number of business dates to the initial date.
@@ -172,8 +172,8 @@ BusinessDays = function(loc='BOG', from=NULL, to=NULL){
   #'      \item NYLDN for the intersection of business days in New York Stock Exchange and London.
   #'      \item NYGBLDN for the intersection of business days in New York Government Bond and London.
   #'      \item BOG for Bogota.
-  #'      \item BOGNY for the intersection of business days in Bogota and New York Government Bond.
-  #'      \item BOGNYGB for the intersection of business days in Bogota and New York Stock Exchange.
+  #'      \item BOGNYGB for the intersection of business days in Bogota and New York Government Bond.
+  #'      \item BOGNY for the intersection of business days in Bogota and New York Stock Exchange.
   #' }
   #'
   #'
