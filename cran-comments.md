@@ -5,3 +5,5 @@
 * This is a new release.
 
 ## Package maintainership transfer from julian.chitiva@quantil.com.co to juan.bermudez@quantil.com.co
+
+## quantdates 2.0.4. Updated the description of arguments of several functions for better understanding.

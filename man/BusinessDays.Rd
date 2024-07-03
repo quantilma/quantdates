@@ -29,8 +29,8 @@ loc refers to the location for business days:
      \item NYLDN for the intersection of business days in New York Stock Exchange and London.
      \item NYGBLDN for the intersection of business days in New York Government Bond and London.
      \item BOG for Bogota.
-     \item BOGNY for the intersection of business days in Bogota and New York Government Bond.
-     \item BOGNYGB for the intersection of business days in Bogota and New York Stock Exchange.
+     \item BOGNYGB for the intersection of business days in Bogota and New York Government Bond.
+     \item BOGNY for the intersection of business days in Bogota and New York Stock Exchange.
 }
 }
 \examples{
